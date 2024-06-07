@@ -1,0 +1,19 @@
+<body>
+    <title>Endless Rules</title>
+    Page AF: <a href="allfags.html">All fags</a>
+    Page 2: <a href="allrulescustom.html?seed=" + Math.random() >Endless Rules</a>
+</body>
+<script>
+    for (let i = 1; i <= 2500; i++) {
+        let reasons = ["Violation of community guidelines", 
+                       "Inappropriate behavior", 
+                       "Spamming", 
+                       "Harassment", 
+                       "Sharing inappropriate content",
+                       "Discrimination based on gender, sexual orientation, race, religion, or disability", "Violating the Discord ToS", "Violating the BonziWORLD ToS","Violating the BonziWORLD Community Guidelines", "Violating the BonziWORLD Privacy Policy","Violating the BonziWORLD Terms of Service","Violating the BonziWORLD Community Guidelines","Violating the BonziWORLD Privacy Policy","Violating the BonziWORLD Terms of Service","Violating the BonziWORLD Community Guidelines","Violating the BonziWORLD Privacy Policy","Violating the BonziWORLD Terms of Service","Violating the BonziWORLD Community Guidelines","Violating the BonziWORLD Privacy Policy","Violating the BonziWORLD Terms of Service", "Violating the BonziWORLD Community Guidelines","Violating the BonziWORLD Privacy Policy","Violating the BonziWORLD Terms of Service","Violating the BonziWORLD Community Guidelines","Violating the BonziWORLD Privacy Policy","Violating the BonziWORLD Terms of Service","saying the n word","saying the n word","saying the n word","saying the n word","fake ban","fake kick","telling public a password","Spamming EWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"];
+        reasons.push("Breaking rules");
+        let randomReason = reasons[Math.floor(Math.random()*reasons.length)];
+        console.log(`Rule ${i}: No ${randomReason}`);
+        document.querySelector('body').innerHTML += `<p>Rule ${i}: No ${randomReason}</p>`;
+    }
+</script>

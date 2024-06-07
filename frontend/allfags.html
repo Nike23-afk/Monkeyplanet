@@ -1,0 +1,46 @@
+<All>
+  <Fags>
+    <Made_by>
+      <ivorydevrimo>
+        Anonymousfag
+        bonzibuddyfag
+        bonziworldfag
+        countfag
+        discordadvertizefag
+        discordfag
+        Elephanthitfag
+        Fagfag - powerful
+        fagfagfag - destroys powerful
+        fagfagfagfag - saves powerful from getting destroyed
+        FakeBanfag
+        fakeOwnerfag
+        fakegodmodefag
+        ivoryfag
+        ivorydiscordfag
+        ivorybonziworldfag
+        msagentfag
+        logofag
+        replitfag
+        [randomglitch]fag
+        swearfag
+        vorefag
+        inflationfag
+        moneyfag
+        fuckunefag
+        funefag
+        pingfag
+        ttscrashfag
+        ttslanguagechangerfag
+      </ivorydevrimo>
+      <script>
+        let randomGlitch = "[randomglitch]";
+        let randomBytes = new Uint8Array(16);
+        window.crypto.getRandomValues(randomBytes);
+        randomGlitch = randomGlitch.replace("[randomglitch]", String.fromCharCode(...randomBytes));
+        document.querySelectorAll("ivorydevrimo").forEach(element => {
+          element.innerHTML = element.innerHTML.replace(/\[randomglitch]/g, randomGlitch);
+        });
+      </script>
+    </Made_by>
+  </Fags>
+</All>

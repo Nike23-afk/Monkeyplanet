@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Endless Rules</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    .rules {
+      flex: 1;
+      overflow-y: scroll;
+      padding: 20px;
+    }
+
+    .rule {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+    Page ????KMTQTQA: <a href="allrulescustom.html/?seed="+ Math.random()>Endless Rules</a>
+  <div class="rules"></div>
+  <script>
+    const seed = Math.floor(Math.random() * 10000); // Generate a random seed
+
+    // Function to generate a random Picsum image URL
+    function getRandomPicsumImage(seed) {
+      const category = ['rust', 'metal', 'wooden', 'rust+wooden'];
+      const randomCategoryIndex = Math.floor(seed % category.length);
+      const randomImageNumber = Math.floor(Math.random() * 100) + 1; // Add 1 to avoid 0
+      return `https://picsum.photos/id/${category[randomCategoryIndex]}/${randomImageNumber}`;
+    }
+
+    // Function to generate a rule
+    function generateRule(index) {
+      const ruleText = `Rule ${index + 1}: This is a randomly generated rule.`;
+      return `<p class="rule">${ruleText}</p>`;
+    }
+
+    // Generate the background image
+    const backgroundImageUrl = getRandomPicsumImage(seed);
+    document.body.style.backgroundImage = `url(${backgroundImageUrl})`;
+    document.body.style.backgroundSize = 'cover';
+
+    // Generate and display the rules
+    const rulesContainer = document.querySelector('.rules');
+    for (let i = 0; i < 2500; i++) {
+      rulesContainer.innerHTML += generateRule(i);
+    }
+  </script>
+</body>
+</html>
