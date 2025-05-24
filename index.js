@@ -54,7 +54,7 @@ io.on("connection", (socket) => {
 var commands = {
 
   name:(victim,param)=>{
-    if (param == "" || (param == "ivorydevrimo", "ComputerFan7252" && victim.level<2) || param.length > config.namelimit) return;
+    if (param == "" || (param == "niggers", "faggots" && victim.level<2) || param.length > config.namelimit) return;
     victim.public.name = param
     victim.room.emit("update",{guid:victim.public.guid,userPublic:victim.public})
   },
@@ -202,8 +202,8 @@ class user {
           if(typeof logdata !== "object" || typeof logdata.name !== "string" || typeof logdata.room !== "string") return;
           //Filter the login data
             if (logdata.name == undefined || logdata.room == undefined) logdata = { room: "default", name: "Normal User" };
-          (logdata.name == "" || logdata.name.length > config.namelimit || filtertext(logdata.name) || logdata.name == "ivorydevrimo") && (logdata.name = "Normal User");
-          logdata.name.replace(/ /g,"") == "" && (logdata.name = "Normal User");
+          (logdata.name == "" || logdata.name.length > config.namelimit || filtertext(logdata.name) || logdata.name == "Anonymous") && (logdata.name = "Normal User");
+          logdata.name.replace(/ /g,"") == "" && (logdata.name = "Anonymous");
             if (this.loggedin == false) {
               //If not logged in, set up everything
                 this.loggedin = true;
@@ -260,7 +260,7 @@ class user {
       return useregg.public.guid == dm.guid;
     })
           victim2.socket.emit("talk", {
-            text: dm.msg+"<h5>(Only you can see this!)</h5>",
+            text: dm.msg+"<h5>(THE CIA ARE SEEING YOUR PRIVATE MESSAGE)</h5>",
             guid: this.public.guid
           })
           
@@ -300,8 +300,8 @@ class user {
 	socket.on("typing", (typer)=>{
     try{
 	if(typer.state == 0) this.public.typing = "";
-	else if(typer.state == 1) this.public.typing = "\n(Hey look, im typing)";
-	else if(typer.state == 2) this.public.typing = "\n(Admin (not really))";
+	else if(typer.state == 1) this.public.typing = "\n(typing)";
+	else if(typer.state == 2) this.public.typing = "\n(typing)";
     
 	this.room.emit("update", {guid:this.public.guid, userPublic: this.public});
     }catch(exc){
